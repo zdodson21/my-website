@@ -3,6 +3,9 @@ const config = {
   framework: {
     name: '@web/storybook-framework-web-components',
   },
+  core: {
+    disableTelemetry: true, // 👈 Disables telemetry
+  },
 };
 
 export default config;
