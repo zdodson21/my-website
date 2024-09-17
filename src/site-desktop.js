@@ -9,7 +9,7 @@ import './desktop-taskbar.js';
  * @author Zach Dodson
  * @description Highest layer overhead component for Windows themed website project.
  */
-class SiteDesktop extends LitElement {
+export class SiteDesktop extends LitElement {
 
   constructor() {
     super();
