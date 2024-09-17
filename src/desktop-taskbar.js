@@ -43,4 +43,5 @@ export class DesktopTaskbar extends LitElement {
     theme: { type: String },
   }
 }
+
 customElements.define('desktop-taskbar', DesktopTaskbar);

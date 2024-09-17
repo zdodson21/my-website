@@ -26,4 +26,5 @@ export class DesktopEnvironment extends LitElement {
     theme: { type: String },
   }
 }
+
 customElements.define('desktop-environment', DesktopEnvironment);
