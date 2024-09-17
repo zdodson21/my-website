@@ -1,19 +1,18 @@
-<p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
-</p>
+# README.md
 
-## Open-wc Starter App
+## Tools used in this project
+* Lit Framework (OpenWC)
+* 
 
-[![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+## Components + Hierarchy
 
-## Quickstart
-
-To get started:
-
-```bash
-npm init @open-wc
-# requires node 10 & npm 6 or higher
-```
+* `site-desktop.js`
+  * `desktop-environment.js`
+  * `desktop-taskbar.js`
+    * `taskbar-start.js`
+    * `taskbar-item.js`
+    * `taskbar-clock.js`
+* `site-store.js` - State management store for all components
 
 ## Scripts
 

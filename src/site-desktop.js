@@ -34,6 +34,7 @@ class SiteDesktop extends LitElement {
   render() {
     return html`
       <div class="site-desktop-wrapper">
+        <!-- <desktop-environment></desktop-environment> -->
         <desktop-taskbar></desktop-taskbar>
       </div>
     `;

@@ -26,9 +26,21 @@ export class DesktopTaskbar extends LitElement {
   render() {
     return html`
       <div class="desktop-taskbar-wrapper">
-
+        <div class="left">
+          <!-- <taskbar-start></taskbar-start> -->
+        </div>
+        <div class="middle">
+          <!-- taskbar-items will go here -->
+        </div>
+        <div class="right">
+          <!-- <taskbar-clock></taskbar-clock> -->
+        </div>
       </div>
     `;
+  }
+
+  static properties = {
+    theme: { type: String },
   }
 }
 customElements.define('desktop-taskbar', DesktopTaskbar);
