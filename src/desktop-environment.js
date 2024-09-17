@@ -1,11 +1,11 @@
-import { LitElement, html, css } from 'lit';
-import { siteStore } from './site-store.js';
+import { LitElement, css, html } from 'lit';
+import { Store } from './site-store.js';
 
 export class DesktopEnvironment extends LitElement {
   
   constructor() {
     super();
-    this.theme = siteStore.theme;
+    this.theme = Store.theme;
   }
 
   static styles = css`

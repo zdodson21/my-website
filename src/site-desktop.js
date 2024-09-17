@@ -1,7 +1,7 @@
-import { LitElement, html, css } from "lit";
-import { siteStore } from './site-store.js';
-import './desktop-taskbar.js';
+import { LitElement, css, html } from "lit";
 import './desktop-environment.js';
+import './desktop-taskbar.js';
+import { Store } from './site-store.js';
 
 /**
  * @customElement site-desktop
@@ -14,7 +14,7 @@ export class SiteDesktop extends LitElement {
 
   constructor() {
     super();
-    this.theme = siteStore.theme;
+    this.theme = Store.theme;
   }
 
   static styles = css`

@@ -8,4 +8,4 @@ class SiteStore {
   }
 }
 
-export const siteStore = new SiteStore();
+export const Store = new SiteStore();
