@@ -1,10 +1,11 @@
 import { LitElement, html, css } from "lit";
+import { siteStore } from './site-store.js';
 
 class SiteDesktop extends LitElement {
 
   constructor() {
     super();
-    this.theme = '95'
+    this.theme = siteStore.theme;
   }
 
   static styles = css`
@@ -25,7 +26,7 @@ class SiteDesktop extends LitElement {
   render() {
     return html`
       <div class="site-desktop-wrapper">
-
+        <p>${this.theme}</p>
       </div>
     `;
   }
