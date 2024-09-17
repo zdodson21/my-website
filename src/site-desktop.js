@@ -1,5 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { siteStore } from './site-store.js';
+import './desktop-taskbar.js';
 
 /**
  * @customElement site-desktop
@@ -33,7 +34,7 @@ class SiteDesktop extends LitElement {
   render() {
     return html`
       <div class="site-desktop-wrapper">
-        <p>${this.theme}</p>
+        <desktop-taskbar></desktop-taskbar>
       </div>
     `;
   }
