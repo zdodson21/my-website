@@ -1,6 +1,13 @@
 import { LitElement, html, css } from "lit";
 import { siteStore } from './site-store.js';
 
+/**
+ * @customElement site-desktop
+ * @extends LitElement
+ * @tag site-desktop
+ * @author Zach Dodson
+ * @description Highest layer overhead component for Windows themed website project.
+ */
 class SiteDesktop extends LitElement {
 
   constructor() {
