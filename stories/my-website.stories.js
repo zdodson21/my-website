@@ -1,21 +1,14 @@
 import { html } from 'lit';
-import '../src/my-website.js';
+import '../src/site-desktop.js';
 
 export default {
-  title: 'MyWebsite',
-  component: 'my-website',
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  title: 'SiteDesktop',
+  component: 'site-desktop',
 };
 
-function Template({ header, backgroundColor }) {
+function Template() {
   return html`
-    <my-website
-      style="--my-website-background-color: ${backgroundColor || 'white'}"
-      .header=${header}
-    >
-    </my-website>
+    <site-desktop></site-desktop>
   `;
 }
 

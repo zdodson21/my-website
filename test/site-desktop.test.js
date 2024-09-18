@@ -1,6 +1,7 @@
 import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 import '../src/site-desktop.js';
+// TODO check if I even need these
 import '../src/desktop-environment.js';
 import '../src/desktop-taskbar.js';
 // import { Store } from '../src/site-store.js';
