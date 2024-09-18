@@ -1,5 +1,6 @@
 import { LitElement, css, html } from 'lit';
 import { Store } from './site-store.js';
+import './taskbar-clock.js';
 
 export class DesktopTaskbar extends LitElement {
 
@@ -33,7 +34,7 @@ export class DesktopTaskbar extends LitElement {
           <!-- taskbar-items will go here -->
         </div>
         <div class="right">
-          <!-- <taskbar-clock></taskbar-clock> -->
+          <taskbar-clock></taskbar-clock>
         </div>
       </div>
     `;
