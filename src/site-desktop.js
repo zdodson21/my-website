@@ -41,6 +41,7 @@ export class SiteDesktop extends LitElement {
     `;
   }
 
+  // TODO figure out why attribute isn't there...
   static properties = {
     theme: { type: String },
   }

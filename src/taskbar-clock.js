@@ -11,6 +11,8 @@ export class TaskbarClock extends LitElement {
     this.minute = this.time.getMinutes();
     this.second = this.time.getSeconds();
 
+    // TODO any number below 10 should have a leading 0
+    // TODO add support for 12 hour clock (am/pm)
     setInterval(() => {
       this.time = new Date();
       
@@ -21,6 +23,7 @@ export class TaskbarClock extends LitElement {
     }, 500);
   }
 
+  // TODO modify CSS match theme
   static styles = css`
     :host {
       display: block;

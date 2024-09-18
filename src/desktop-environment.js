@@ -12,6 +12,14 @@ export class DesktopEnvironment extends LitElement {
     :host {
       display: block;
     }
+
+    .desktop-environment-wrapper {
+      width: 100%;
+      height: 95%;
+      top: 0;
+      left: 0;
+      position: fixed;
+    }
   `;
 
   render() {

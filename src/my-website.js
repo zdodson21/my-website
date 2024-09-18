@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit';
 
 const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
+// TODO delete this component when safe to do so, not needed in final product
 class MyWebsite extends LitElement {
   static properties = {
     header: { type: String },
