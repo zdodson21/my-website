@@ -1,5 +1,5 @@
+import { expect, fixture } from '@open-wc/testing';
 import { html } from 'lit';
-import { fixture, expect } from '@open-wc/testing';
 import '../src/site-desktop.js';
 // TODO check if I even need these
 import '../src/desktop-environment.js';
@@ -13,9 +13,7 @@ describe('SiteDesktop', () => {
   });
 
   it('renders a desktop-environment', () => {
-    const desktopEnvironment = element.shadowRoot.querySelector(
-      'desktop-environment',
-    );
+    const desktopEnvironment = element.shadowRoot.querySelector('desktop-environment');
     expect(desktopEnvironment).to.exist;
   });
 
