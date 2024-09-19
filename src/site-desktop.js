@@ -13,7 +13,7 @@ import { Store } from './site-store.js';
 export class SiteDesktop extends LitElement {
   constructor() {
     super();
-    this.theme = Store.theme;
+    this.theme = Store.theme; // TODO this or properties is NOT setting default value in HTML, look into why.
   }
 
   static styles = css`
@@ -24,10 +24,13 @@ export class SiteDesktop extends LitElement {
     .site-desktop-wrapper {
       width: 100%;
       height: 100%;
-      background-color: #007f80;
       top: 0;
       left: 0;
       position: fixed;
+    }
+
+    :host([theme='95']) .site-desktop-wrapper {
+      background-color: #007f80;
     }
   `;
 
