@@ -11,9 +11,9 @@ describe('TaskbarClock', () => {
   it('renders a p', () => {
     const p = element.shadowRoot.querySelector('p');
     expect(p).to.exist;
-  })
+  });
 
   it('passes the a11y audit', async () => {
     await expect(element).shadowDom.to.be.accessible();
   });
-})
+});

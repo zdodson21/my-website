@@ -1,4 +1,4 @@
-import { html} from 'lit';
+import { html } from 'lit';
 import { fixture, expect } from '@open-wc/testing';
 import '../src/desktop-taskbar.js';
 import '../src/taskbar-clock.js';
@@ -11,7 +11,7 @@ describe('DesktopTaskbar', () => {
   beforeEach(async () => {
     element = await fixture(html`<desktop-taskbar></desktop-taskbar>`);
   });
-  
+
   it('renders a taskbar-clock', () => {
     const taskbarClock = element.shadowRoot.querySelector('taskbar-clock');
     expect(taskbarClock).to.exist;

@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "lit";
+import { LitElement, css, html } from 'lit';
 import './desktop-environment.js';
 import './desktop-taskbar.js';
 import { Store } from './site-store.js';
@@ -11,7 +11,6 @@ import { Store } from './site-store.js';
  * @description Highest layer overhead component for Windows themed website project.
  */
 export class SiteDesktop extends LitElement {
-
   constructor() {
     super();
     this.theme = Store.theme;
@@ -44,7 +43,7 @@ export class SiteDesktop extends LitElement {
   // TODO figure out why attribute isn't there...
   static properties = {
     theme: { type: String },
-  }
+  };
 }
 
 customElements.define('site-desktop', SiteDesktop);

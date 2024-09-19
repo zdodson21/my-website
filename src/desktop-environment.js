@@ -2,7 +2,6 @@ import { LitElement, css, html } from 'lit';
 import { Store } from './site-store.js';
 
 export class DesktopEnvironment extends LitElement {
-  
   constructor() {
     super();
     this.theme = Store.theme;
@@ -23,16 +22,12 @@ export class DesktopEnvironment extends LitElement {
   `;
 
   render() {
-    return html`
-      <div class="desktop-environment-wrapper">
-        
-      </div>
-    `;
+    return html` <div class="desktop-environment-wrapper"></div> `;
   }
 
   static properties = {
     theme: { type: String },
-  }
+  };
 }
 
 customElements.define('desktop-environment', DesktopEnvironment);

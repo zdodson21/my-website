@@ -3,7 +3,6 @@
  * @description State management store for all components
  */
 class SiteStore {
-  
   constructor() {
     this.theme = '95';
 

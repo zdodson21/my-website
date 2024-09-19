@@ -7,9 +7,7 @@ export default {
 };
 
 function Template() {
-  return html`
-    <site-desktop></site-desktop>
-  `;
+  return html` <site-desktop></site-desktop> `;
 }
 
 export const App = Template.bind({});

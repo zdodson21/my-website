@@ -3,7 +3,6 @@ import { Store } from './site-store.js';
 import './taskbar-clock.js';
 
 export class DesktopTaskbar extends LitElement {
-
   constructor() {
     super();
     this.theme = Store.theme;
@@ -42,7 +41,7 @@ export class DesktopTaskbar extends LitElement {
 
   static properties = {
     theme: { type: String },
-  }
+  };
 }
 
 customElements.define('desktop-taskbar', DesktopTaskbar);

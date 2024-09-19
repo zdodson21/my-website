@@ -2,7 +2,6 @@ import { LitElement, html, css } from 'lit';
 import { Store } from './site-store.js';
 
 export class TaskbarClock extends LitElement {
-  
   constructor() {
     super();
     this.theme = Store.theme;
@@ -15,7 +14,7 @@ export class TaskbarClock extends LitElement {
     // TODO add support for 12 hour clock (am/pm)
     setInterval(() => {
       this.time = new Date();
-      
+
       this.hour = this.time.getHours();
       this.minute = this.time.getMinutes();
       this.second = this.time.getSeconds();
@@ -45,7 +44,7 @@ export class TaskbarClock extends LitElement {
 
   static properties = {
     theme: { type: String },
-  }
+  };
 }
 
 customElements.define('taskbar-clock', TaskbarClock);

@@ -13,7 +13,9 @@ describe('SiteDesktop', () => {
   });
 
   it('renders a desktop-environment', () => {
-    const desktopEnvironment = element.shadowRoot.querySelector('desktop-environment');
+    const desktopEnvironment = element.shadowRoot.querySelector(
+      'desktop-environment',
+    );
     expect(desktopEnvironment).to.exist;
   });
 
