@@ -32,6 +32,10 @@ export class SiteDesktop extends LitElement {
     :host([theme='95']) .site-desktop-wrapper {
       background-color: #007f80;
     }
+
+    :host([theme='xp']) .site-desktop-wrapper {
+      background-image: url('./assets/xp-background.png'); /* TODO Doesn't work in build :( */
+    }
   `;
 
   render() {
