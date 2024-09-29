@@ -5,6 +5,7 @@ import { inject } from '@vercel/analytics';
 import { injectSpeedInsights } from '@vercel/speed-insights';
 import { Store } from './site-store.js';
 
+// Vercel Analytics
 inject();
 injectSpeedInsights();
 
