@@ -13,10 +13,17 @@ export class DesktopTaskbar extends LitElement {
       display: block;
     }
 
+    :host([theme='95']) .desktop-taskbar-wrapper {
+      background-color: #c5c5c5;
+    }
+
+    :host([theme='xp']) .desktop-taskbar-wrapper {
+      background-color: #2059d8;
+    }
+
     .desktop-taskbar-wrapper {
       width: 100%;
       height: 5%;
-      background-color: #c5c5c5;
       bottom: 0;
       left: 0;
       position: fixed;
@@ -24,7 +31,7 @@ export class DesktopTaskbar extends LitElement {
       grid-template-columns: 5% 90% 5%;
     }
 
-    :host([theme='95']) .right {
+    .right {
       display: flex;
       justify-content: center;
       align-items: center;
