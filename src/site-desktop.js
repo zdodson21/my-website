@@ -5,6 +5,9 @@ import { inject } from '@vercel/analytics';
 import { injectSpeedInsights } from '@vercel/speed-insights';
 import { Store } from './site-store.js';
 
+inject();
+injectSpeedInsights();
+
 /**
  * @customElement site-desktop
  * @extends LitElement
@@ -16,8 +19,6 @@ export class SiteDesktop extends LitElement {
   constructor() {
     super();
     this.theme = Store.theme; // TODO this or properties is NOT setting default value in HTML, look into why.
-    inject();
-    injectSpeedInsights();
   }
 
   static styles = css`
