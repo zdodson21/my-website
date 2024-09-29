@@ -1,6 +1,8 @@
 import { LitElement, css, html } from 'lit';
 import './desktop-environment.js';
 import './desktop-taskbar.js';
+import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import { Store } from './site-store.js';
 
 /**
@@ -14,6 +16,8 @@ export class SiteDesktop extends LitElement {
   constructor() {
     super();
     this.theme = Store.theme; // TODO this or properties is NOT setting default value in HTML, look into why.
+    inject();
+    injectSpeedInsights();
   }
 
   static styles = css`
