@@ -1,5 +1,11 @@
 // import { autorun } from "mobx";
 
+import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+inject();
+injectSpeedInsights();
+
 /**
  * @author Zach Dodson
  * @description State management store for all components
