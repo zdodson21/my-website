@@ -43,7 +43,7 @@ export class TaskbarClock extends LitElement {
   }
 
   static properties = {
-    theme: { type: String },
+    theme: { type: String, reflect: true },
   };
 }
 

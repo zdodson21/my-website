@@ -26,7 +26,7 @@ export class DesktopEnvironment extends LitElement {
   }
 
   static properties = {
-    theme: { type: String },
+    theme: { type: String, reflect: true },
   };
 }
 
