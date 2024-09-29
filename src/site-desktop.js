@@ -1,7 +1,10 @@
 import { LitElement, css, html } from 'lit';
 import './desktop-environment.js';
 import './desktop-taskbar.js';
+import { inject } from '@vercel/analytics';
 import { Store } from './site-store.js';
+
+inject();
 
 /**
  * @customElement site-desktop
