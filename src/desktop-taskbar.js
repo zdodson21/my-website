@@ -20,6 +20,14 @@ export class DesktopTaskbar extends LitElement {
       bottom: 0;
       left: 0;
       position: fixed;
+      display: grid;
+      grid-template-columns: 5% 90% 5%;
+    }
+
+    :host([theme='95']) .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   `;
 

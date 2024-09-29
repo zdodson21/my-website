@@ -5,45 +5,69 @@ export class TaskbarClock extends LitElement {
   constructor() {
     super();
     this.theme = Store.theme;
-    this.time = new Date();
-    this.hour = this.time.getHours();
-    this.minute = this.time.getMinutes();
-    this.second = this.time.getSeconds();
 
-    // TODO any number below 10 should have a leading 0
-    // TODO add support for 12 hour clock (am/pm)
     setInterval(() => {
       this.time = new Date();
+      this.halfOfDay = 'AM';
 
       this.hour = this.time.getHours();
+      if (this.hour > 12) {
+        this.hour -= 12;
+        this.halfOfDay = 'PM';
+      }
+
       this.minute = this.time.getMinutes();
+      if (this.minute < 10) this.minute = `0${this.minute}`;
+
       this.second = this.time.getSeconds();
-      this.updateClock();
-    }, 500);
+
+      this.clock = `${this.hour}:${this.minute}${this.halfOfDay}`;
+
+      this.requestUpdate();
+    }, 100);
   }
 
-  // TODO modify CSS match theme
   static styles = css`
     :host {
       display: block;
+      --border-black: #353535;
+      --border-white: #e6e6e6;
+    }
+
+    .clock {
+      border-style: inset;
+      border-top-color: var(--border-black);
+      border-left-color: var(--border-black);
+      border-bottom-color: var(--border-white);
+      border-right-color: var(--border-white);
+      border-width: 2px;
+      padding: 2px 4px;
+
+      /* Prevent highlighting of clock text */
+      user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
     }
   `;
 
   render() {
     return html`
       <div class="taskbar-clock-wrapper">
-        <p class="clock">${this.hour}:${this.minute}</p>
+        <p class="clock">${this.clock}</p>
       </div>
     `;
   }
 
-  updateClock() {
-    const CLOCK = this.shadowRoot.querySelector('.clock');
-    CLOCK.innerHTML = `${this.hour}:${this.minute}`;
-  }
-
   static properties = {
     theme: { type: String, reflect: true },
+    time: { type: Date },
+    hour: { type: Number },
+    minute: { type: Number },
+    second: { type: Number },
+    halfOfDay: { type: String },
+    clock: { type: String },
   };
 }
 
