@@ -34,7 +34,7 @@ export class TaskbarClock extends LitElement {
       --border-white: #e6e6e6;
     }
 
-    .clock {
+    :host([theme='95']) .clock {
       border-style: inset;
       border-top-color: var(--border-black);
       border-left-color: var(--border-black);
@@ -42,7 +42,9 @@ export class TaskbarClock extends LitElement {
       border-right-color: var(--border-white);
       border-width: 2px;
       padding: 2px 4px;
+    }
 
+    .clock {
       /* Prevent highlighting of clock text */
       user-select: none;
       -webkit-touch-callout: none;
