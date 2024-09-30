@@ -1,5 +1,6 @@
 import { LitElement, css, html } from 'lit';
 import { Store } from './site-store.js';
+import './environment-item.js';
 
 export class DesktopEnvironment extends LitElement {
   constructor() {
@@ -22,7 +23,16 @@ export class DesktopEnvironment extends LitElement {
   `;
 
   render() {
-    return html` <div class="desktop-environment-wrapper"></div> `;
+    return html`
+      <div class="desktop-environment-wrapper">
+        <div class="environment-item-grid">
+          <environment-item
+            item-name="My Computer"
+            icon-store-name="folderOpenIcon95"
+          ></environment-item>
+        </div>
+      </div>
+    `;
   }
 
   static properties = {

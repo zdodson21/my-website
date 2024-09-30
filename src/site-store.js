@@ -9,7 +9,19 @@ class SiteStore {
     // theme options = ['95', 'xp']
     this.theme = '95';
 
-    // TODO new URL for all assets
+    // 95 Icons
+    this.blankWindowIcon95 = new URL(
+      '../assets/icons/95/blank-window.png',
+      import.meta.url,
+    ).href;
+    this.folderClosedIcon95 = new URL(
+      '../assets/icons/95/folder-closed.png',
+      import.meta.url,
+    ).href;
+    this.folderOpenIcon95 = new URL(
+      '../assets/icons/95/folder-open.png',
+      import.meta.url,
+    ).href;
   }
 }
 
