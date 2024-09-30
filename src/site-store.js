@@ -37,7 +37,7 @@ class SiteStore {
 
     // XP Icons
     this.myComputerIconXP = new URL(
-      '../assets/icons/xp/my-computer.png',
+      '../assets/icons/xp/my-computer.ico',
       import.meta.url,
     ).href;
   }

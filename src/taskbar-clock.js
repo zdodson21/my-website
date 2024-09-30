@@ -34,6 +34,23 @@ export class TaskbarClock extends LitElement {
       --border-white: #e6e6e6;
     }
 
+    /* TODO see if I can do something like this:
+
+    :host([theme='95']) {
+      .clock {
+        border-style: inset;
+        border-top-color: var(--border-black);
+        border-left-color: var(--border-black);
+        border-bottom-color: var(--border-white);
+        border-right-color: var(--border-white);
+        border-width: 2px;
+        padding: 2px 4px;
+      }
+    }
+
+    Makes it so I can modify multiple classes while only "calling" :host once per theme
+
+    */
     :host([theme='95']) .clock {
       border-style: inset;
       border-top-color: var(--border-black);
