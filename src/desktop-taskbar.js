@@ -13,12 +13,16 @@ export class DesktopTaskbar extends LitElement {
       display: block;
     }
 
-    :host([theme='95']) .desktop-taskbar-wrapper {
-      background-color: #c5c5c5;
+    :host([theme='95']) {
+      .desktop-taskbar-wrapper {
+        background-color: #c5c5c5;
+      }
     }
 
-    :host([theme='xp']) .desktop-taskbar-wrapper {
-      background-color: #2059d8;
+    :host([theme='xp']) {
+      .desktop-taskbar-wrapper {
+        background-color: #2059d8;
+      }
     }
 
     .desktop-taskbar-wrapper {
