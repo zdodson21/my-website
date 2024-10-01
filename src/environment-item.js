@@ -46,6 +46,10 @@ export class EnvironmentItem extends LitElement {
         flex-direction: column;
         justify-content: center;
       }
+
+      .environment-item-icon {
+        width: 24px;
+      }
     }
   `;
 
