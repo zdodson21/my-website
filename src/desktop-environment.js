@@ -30,6 +30,8 @@ export class DesktopEnvironment extends LitElement {
             item-name="My Computer"
             icon-store-name="folderOpenIcon95"
           ></environment-item>
+          <environment-item></environment-item>
+          <environment-item></environment-item>
         </div>
       </div>
     `;

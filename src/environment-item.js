@@ -39,6 +39,14 @@ export class EnvironmentItem extends LitElement {
     :host {
       display: block;
     }
+
+    :host([theme='95']) {
+      .environment-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
   `;
 
   render() {
