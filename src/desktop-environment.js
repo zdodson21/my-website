@@ -28,13 +28,13 @@ export class DesktopEnvironment extends LitElement {
         <div class="environment-item-grid">
           <environment-item
             icon-src="https://github.com/zdodson21/my-website/blob/main/assets/icons/95/my-computer.png?raw=true"
-            alt-text="My Computer"
+            item-text="My Computer"
           ></environment-item>
           <environment-item
             icon-src="https://github.com/zdodson21/my-website/blob/main/assets/icons/95/recycle-bin.png?raw=true"
-            alt-text="Recycle Bin"
+            item-text="Recycle Bin"
           ></environment-item>
-          <environment-item></environment-item>
+          <environment-item item-text="Folder"></environment-item>
         </div>
       </div>
     `;

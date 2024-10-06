@@ -13,7 +13,7 @@ export class EnvironmentItem extends LitElement {
     this.iconSRC = this.open
       ? 'https://github.com/zdodson21/my-website/blob/main/assets/icons/95/folder-open.png?raw=true'
       : 'https://github.com/zdodson21/my-website/blob/main/assets/icons/95/folder-closed.png?raw=true'; // TODO figure out if I can do this locally or not. Would prefer local image storage
-    this.altText = 'Environment Item';
+    this.itemText = 'Environment Item';
   }
 
   static styles = css`
@@ -40,9 +40,9 @@ export class EnvironmentItem extends LitElement {
         <img
           class="environment-item-icon"
           src="${this.iconSRC}"
-          alt="${this.altText}"
+          alt="${this.itemText}"
         />
-        <p class="environment-item-name">${this.altText}</p>
+        <p class="environment-item-name">${this.itemText}</p>
       </div>
     `;
   }
@@ -57,9 +57,9 @@ export class EnvironmentItem extends LitElement {
       attribute: 'icon-src',
       reflect: true,
     },
-    altText: {
+    itemText: {
       type: String,
-      attribute: 'alt-text',
+      attribute: 'item-text',
       reflect: true,
     },
     isOpen: {
