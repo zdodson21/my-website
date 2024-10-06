@@ -9,30 +9,9 @@ export class EnvironmentItem extends LitElement {
   constructor() {
     super();
     this.theme = Store.theme;
-    this.isFolder = false;
+    this.iconSRC = null;
     this.altText = 'Environment Item';
-    this.isOpen = false; // TODO if folder is opened, then icon needs to change to open folder
-    this.itemName = 'Environment Item';
-    this.iconStoreName = null;
-    // TODO this is always returning as null, even when attribute set in HTML???
-
-    if (this.isFolder) {
-      this.icon = Store.folderClosedIcon95;
-    } else {
-      switch (this.iconStoreName) {
-        case 'blankWindowIcon95':
-          this.icon = Store.blankWindowIcon95;
-          break;
-        case 'folderOpenIcon95':
-          this.icon = Store.folderOpenIcon95;
-          break;
-        case 'folderClosedIcon95':
-          this.icon = Store.folderClosedIcon95;
-          break;
-        default:
-          this.icon = Store.blankWindowIcon95;
-      }
-    }
+    this.isOpen = false;
   }
 
   static styles = css`
@@ -58,10 +37,10 @@ export class EnvironmentItem extends LitElement {
       <div class="environment-item-wrapper">
         <img
           class="environment-item-icon"
-          src="${this.icon}"
+          src="${new URL(this.iconSRC, import.meta.url).href}"
           alt="${this.altText}"
         />
-        <p class="environment-item-name">${this.itemName}</p>
+        <p class="environment-item-name">${this.altText}</p>
       </div>
     `;
   }
@@ -71,9 +50,9 @@ export class EnvironmentItem extends LitElement {
       type: String,
       reflect: true,
     },
-    isFolder: {
-      type: Boolean,
-      attribute: 'is-folder',
+    iconSRC: {
+      type: String,
+      attribute: 'icon-src',
       reflect: true,
     },
     altText: {
@@ -84,16 +63,6 @@ export class EnvironmentItem extends LitElement {
     isOpen: {
       type: Boolean,
       attribute: 'is-open',
-      reflect: true,
-    },
-    itemName: {
-      type: String,
-      attribute: 'item-name',
-      reflect: true,
-    },
-    iconStoreName: {
-      type: String,
-      attribute: 'icon-store-name',
       reflect: true,
     },
   };

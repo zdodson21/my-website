@@ -27,8 +27,8 @@ export class DesktopEnvironment extends LitElement {
       <div class="desktop-environment-wrapper">
         <div class="environment-item-grid">
           <environment-item
-            item-name="My Computer"
-            icon-store-name="folderOpenIcon95"
+            icon-src="/assets/icons/95/my-computer.png"
+            alt-text="My Computer"
           ></environment-item>
           <environment-item></environment-item>
           <environment-item></environment-item>
