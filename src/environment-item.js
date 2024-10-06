@@ -9,9 +9,11 @@ export class EnvironmentItem extends LitElement {
   constructor() {
     super();
     this.theme = Store.theme;
-    this.iconSRC = null;
-    this.altText = 'Environment Item';
     this.isOpen = false;
+    this.iconSRC = this.open
+      ? 'https://github.com/zdodson21/my-website/blob/main/assets/icons/95/folder-open.png?raw=true'
+      : 'https://github.com/zdodson21/my-website/blob/main/assets/icons/95/folder-closed.png?raw=true'; // TODO figure out if I can do this locally or not. Would prefer local image storage
+    this.altText = 'Environment Item';
   }
 
   static styles = css`
