@@ -37,7 +37,7 @@ export class EnvironmentItem extends LitElement {
       <div class="environment-item-wrapper">
         <img
           class="environment-item-icon"
-          src="${new URL(this.iconSRC, import.meta.url).href}"
+          src="${this.iconSRC}"
           alt="${this.altText}"
         />
         <p class="environment-item-name">${this.altText}</p>
@@ -51,7 +51,7 @@ export class EnvironmentItem extends LitElement {
       reflect: true,
     },
     iconSRC: {
-      type: String,
+      type: URL,
       attribute: 'icon-src',
       reflect: true,
     },
