@@ -1,5 +1,7 @@
 import { LitElement, css, html } from 'lit';
 import { Store } from './site-store.js';
+import folderClosed95 from './assets/icons/95/folder-closed.png';
+import folderOpen95 from './assets/icons/95/folder-open.png';
 
 // TODO lit boiler plate
 // TODO item types = [folder, app]
@@ -10,9 +12,7 @@ export class EnvironmentItem extends LitElement {
     super();
     this.theme = Store.theme;
     this.isOpen = false;
-    this.iconSRC = this.open
-      ? 'https://github.com/zdodson21/my-website/blob/main/assets/icons/95/folder-open.png?raw=true'
-      : 'https://github.com/zdodson21/my-website/blob/main/assets/icons/95/folder-closed.png?raw=true'; // TODO figure out if I can do this locally or not. Would prefer local image storage
+    this.iconSRC = this.open ? folderOpen95 : folderClosed95;
     this.itemText = 'Environment Item';
   }
 

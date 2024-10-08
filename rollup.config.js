@@ -3,6 +3,7 @@ import babel from '@rollup/plugin-babel';
 import { rollupPluginHTML as html } from '@web/rollup-plugin-html';
 import { importMetaAssets } from '@web/rollup-plugin-import-meta-assets';
 import esbuild from 'rollup-plugin-esbuild';
+import image from '@rollup/plugin-image';
 // import { generateSW } from 'rollup-plugin-workbox';
 // import path from 'path';
 
@@ -52,6 +53,10 @@ export default {
           },
         ],
       ],
+    }),
+
+    image({
+      limit: 10000,
     }),
     /** Create and inject a service worker */
     // generateSW({

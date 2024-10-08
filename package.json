@@ -51,6 +51,7 @@
     "rimraf": "^5.0.9",
     "rollup": "^4.18.1",
     "rollup-plugin-esbuild": "^6.1.1",
+    "rollup-plugin-img": "^1.1.0",
     "rollup-plugin-workbox": "^8.1.0",
     "storybook": "^7.6.20"
   },

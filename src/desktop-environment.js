@@ -1,6 +1,8 @@
 import { LitElement, css, html } from 'lit';
 import { Store } from './site-store.js';
 import './environment-item.js';
+import myComputer95 from './assets/icons/95/my-computer.png';
+import recycleBin95 from './assets/icons/95/recycle-bin.png';
 
 export class DesktopEnvironment extends LitElement {
   constructor() {
@@ -27,11 +29,11 @@ export class DesktopEnvironment extends LitElement {
       <div class="desktop-environment-wrapper">
         <div class="environment-item-grid">
           <environment-item
-            icon-src="https://github.com/zdodson21/my-website/blob/main/assets/icons/95/my-computer.png?raw=true"
+            icon-src="${myComputer95}"
             item-text="My Computer"
           ></environment-item>
           <environment-item
-            icon-src="https://github.com/zdodson21/my-website/blob/main/assets/icons/95/recycle-bin.png?raw=true"
+            icon-src="${recycleBin95}"
             item-text="Recycle Bin"
           ></environment-item>
           <environment-item item-text="Folder"></environment-item>
