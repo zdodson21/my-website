@@ -1,7 +1,13 @@
 import { LitElement, css, html } from 'lit';
 import { Store } from './site-store.js';
+
+// 95 Icons
 import folderClosed95 from './assets/icons/95/folder-closed.png';
 import folderOpen95 from './assets/icons/95/folder-open.png';
+
+// XP Icons
+import folderClosedXP from './assets/icons/xp/folder-closed.png';
+import folderOpenXP from './assets/icons/xp/folder-open.png';
 
 // TODO lit boiler plate
 // TODO item types = [folder, app]
@@ -12,7 +18,13 @@ export class EnvironmentItem extends LitElement {
     super();
     this.theme = Store.theme;
     this.isOpen = false;
-    this.iconSRC = this.open ? folderOpen95 : folderClosed95;
+
+    // TODO this should probably go into the same autorun that occurs when theme is updated.
+    if (this.theme === '95') {
+      this.iconSRC = this.isOpen ? folderOpen95 : folderClosed95;
+    } else if (this.theme === 'xp') {
+      this.iconSRC = this.isOpen ? folderOpenXP : folderClosedXP;
+    }
     this.itemText = 'Environment Item';
   }
 
