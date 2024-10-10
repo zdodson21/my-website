@@ -32,6 +32,15 @@ export class EnvironmentItem extends LitElement {
         width: 24px;
       }
     }
+
+    .environment-item-name {
+      /* Prevent text highlighting */
+      user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+    }
   `;
 
   render() {
